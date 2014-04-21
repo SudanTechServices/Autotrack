@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://jqtouch.googlecode.com/svn-history/r134/trunk/jqtouch/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+var xmlhttp1;
+//var IpAddress = "27.58.59.165";
+var Port = 80;
+function init(ipaddress)
+{
+
+			var rnd = Math.random();
+			xmlhttp1 = new ActiveXObject("Microsoft.XMLHTTP");
+			xmlhttp1.onreadystatechange=function()
+			{
+
+			  		if (xmlhttp1.readyState==4 && xmlhttp1.status==200)
+			  		{
+						try
+						{
+
+			     	    	eplus.SetDisplayMode(2)
+					    	eplus.SetDvrinitial(21);
+					    	eplus.SetCameraMap(0, 0)
+
+							eplus.LiveStream(ipaddress,Port,xmlhttp1.responseText, 3);
+							window.status="Live Stream Started.";
+			 		 	}
+			 		 	catch(e)
+			 		 	{
+
+			 		 	}
+			 		 }
+
+			}
+
+		xmlhttp1.open("GET","http://" + ipaddress + ":" + Port + "/Live.cgi?cmd=register_stream&x=" + rnd,true);
+
+		xmlhttp1.send();
+		
+
+}
+function check(){
+
+	$(document).ready(function(){
+	this.timer = setTimeout(function () {
+	$.ajax({
+	url: 'get_ip_address.jsp',
+	data: 'imei=001114-0a-50-4d',
+	type: 'POST',
+	success: function(ipaddress){ 
+		
+		var ipaddress = ipaddress.trim();
+		
+		alert(ipaddress);
+		
+		init(ipaddress);
+		
+		
+	} }); }, 600);
+
+	return true;
+	});
+	
+	self.setInterval("check()",5000);
+}
+
+</script>
+<script language=jscript event=EventMsg(code) for=eplus>
+
+	var Msgcode = code & 0xff;
+
+	switch(Msgcode)
+	{
+		case 33:
+		{
+			window.status="Connection Lost!";
+			alert("Connection Lost!");
+			init();
+		}
+		break;
+	}
+
+</script>
+</head>
+<body onLoad="check();" bgcolor="#FFFFFF">
+
+<div align="left">
+<table id="myTable" bgcolor="#33CCCC" width="600" border="0">
+
+<!-- <tr>
+<td width="33%">
+<div id="DeviceName"  align="Left" ><font face="arial" size="+1" color="#FFFFFF"></font></div>
+</td>
+
+
+
+</tr> -->
+<tr>
+
+<td id="frame" bgcolor="#33CCCC" colspan="3" align="left" height="300" width="700">
+	<!-- <object id="eplus" classid="CLSID:1E4FF862-57ED-4E5C-9C57-3ECB8DC17827" codebase="http://" + IpAddress + ":" + Port + "/ePlusDVR.cab" width="600" height="400">
+	</object> -->
+</td>
+
+</tr>
+</table>
+</div>
+</body>
+</html>
