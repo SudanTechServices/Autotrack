@@ -46,7 +46,7 @@
 	%>
 	<center>
 	<div class="wrapper">
-	  <div style="height:60px;"></div>
+
 	  <div class="top">&nbsp;</div><br />
 	  <div style="padding-left:50px;">
 	  <form name="forgotpassword" method="post" accept-charset="utf-8" ">
