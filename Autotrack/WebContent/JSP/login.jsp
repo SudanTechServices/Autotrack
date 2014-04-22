@@ -73,7 +73,7 @@ mode="";
 <body style="background:url(../images/login_bg.jpg); background-repeat:repeat-x; width:100%;" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 <center>
 <div class="wrapper">
-<div style="height:20px;"></div>
+
   <div class="top">&nbsp;</div><br />
   <div style="padding-left:50px;">
   
