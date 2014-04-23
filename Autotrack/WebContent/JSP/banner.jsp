@@ -82,7 +82,7 @@ System.out.println("Last Login : "+ ses_hour);
 <div class="logoinnerleft">
 <div class="homebtn"><div class="homefont"><a href="homepage.jsp" target="Content">Home</a></div></div>
 </div>
-<div class="logoinnerright"><a href="#">Reset password</a>
+<div class="logoinnerright"><a href="resetpassword.jsp" target="Content">Reset password</a>
 <div class="logoinnerright"><a href="#" onclick="Logout();">Logout</a></div>
 </div>
 </div>

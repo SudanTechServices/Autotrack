@@ -66,13 +66,11 @@ String mailid=request.getParameter("emailid");
 	</div>
 	<div>
 	<form name="eid" method="post">
-		<table cellpadding="3px;" cellspacing="2px;" class="table_content"
-			style="width: 100%; background-color: #f1fafc; border: 1px solid #2898b4;">
+		<table cellpadding="4" cellspacing="0" class="table_content" style="width: 100%; background-color: #f8f8f8; border: 1px solid #dfdddb;">
 			<tr>
 				<td>
-					<table cellpadding="3px;" cellspacing="2px;" class="table_content"
-						style="width: 70%; background-color: #f1fafc;">				
 								
+					<table cellpadding="4" cellspacing="0" class="table_content" style="width: 50%; background-color: #f8f8f8;">			
 						<tr>
 							<td></td>
 							<td></td>
@@ -80,29 +78,29 @@ String mailid=request.getParameter("emailid");
 						</tr>
 						<tr>
 							<td></td>
-							<td>Your User name<span class="mandat">*</span></td>
+							<td>User name<span class="mandat">*</span></td>
 							<td>:</td>
 							<td><input class="tb" type="text" size="25" name="username" value="<%=loggedinas%>" disabled="disabled" /></td>
 						</tr>
 						<tr>
 							<td></td>
-							<td>Enter Your Old Password<span class="mandat">*</span></td>
+							<td>Old Password<span class="mandat">*</span></td>
 							<td>:</td>
-							<td><input class="tb" size="25" type="password" name="oldpass" /></td>
+							<td><input size="25" type="password" name="oldpass" /></td>
 							<td>	<label style="color: red"><%=mode%></label>	</td>
 						</tr>
 						<tr>
 							<td></td>
-							<td>Enter Your New Password<span class="mandat">*</span></td>
+							<td>New Password<span class="mandat">*</span></td>
 							<td>:</td>
-							<td><input class="tb" size="25" type="password" name="newpswd" /></td>
+							<td><input size="25" type="password" name="newpswd" /></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>Confirm Password<span class="mandat">*</span></td>
 							<td>:</td>
-							<td><input class="tb" size="25" type="password" name="newcpswd" /></td>
-							<td>	<label style="color: red"><%=mode1%></label> </td>
+							<td><input size="25" type="password" name="newcpswd" /></td>
+							<td><label style="color: red"><%=mode1%></label> </td>
 						</tr>
 						<tr>
 							<td></td>
@@ -111,7 +109,7 @@ String mailid=request.getParameter("emailid");
 							<td></td>
 						</tr>
 						<tr style="text-align: center;">
-							<td colspan="4"><input type="button" name="resetpwd"  value="ResetPassword"  onclick="update();"/></td>
+							<td colspan="4"><input type="button" name="resetpwd"  value="Reset"  onclick="update();"/></td>
 						</tr>
 						<tr>
 							<td></td>
