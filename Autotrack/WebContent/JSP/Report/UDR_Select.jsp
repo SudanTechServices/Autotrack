@@ -809,7 +809,7 @@
 		<div id="divarea2" class="box">
 				
 		
-<!-- 6 -->	<form name="tripsheet" method="post">
+	<form name="tripsheet" method="post">
 		
 					<table cellspacing="0" cellpadding="4" class="table_content"
 		style="width: 100%; background-color: #f9f7f5; border: 1px solid #dfdbdb;">
@@ -818,7 +818,7 @@
 								<table cellpadding="2" cellspacing="0" class="table_content"
 									style="width: 50%; background-color: #f9f7f5;">
 									<tr>
-										<td>
+										<td colspan="2">
 											<table style="width: 60%;" cellpadding="2" cellspacing="0" >
 												<tr>
 													<td>Select Date</td>
@@ -831,6 +831,7 @@
 													<img src="../../images/calendar_icon.gif" width="16" height="16" border="0" alt="Pick a date" onclick="displayDatePicker('date');" /></td>
 												</tr>
 											</table>
+										</td>
 									</tr>
 		
 									<tr>
