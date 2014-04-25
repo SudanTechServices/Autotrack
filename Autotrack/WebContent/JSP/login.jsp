@@ -116,7 +116,7 @@ mode="";
             </tr>
             <tr>
               <td colspan="4">
-              	<table cellpadding="0" cellspacing="0"  border="0">
+              	<table cellpadding="0" cellspacing="0"  border="0" width="90%">
                 	<tr>
                        <td width="10%"></td>
                        <td><img src="../images/forgot_password.png" /></td>
@@ -136,7 +136,7 @@ mode="";
             </tr>
             <tr>
               <td align="center" colspan="4">
-              <input type="submit" value="" name="" onclick="login();"  style="border-style: none; background: url('../images/login_buttom.png') no-repeat; width: 137px; height: 45px; cursor: pointer;" />
+              <input type="submit" value="" name="" onclick="login();"  style="border-style: none; background: url('../images/login_buttom.png') no-repeat; width: 137px; height: 45px; border:0px; cursor: pointer;" />
 
               </td>
             </tr>
