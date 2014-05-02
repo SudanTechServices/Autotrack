@@ -14,7 +14,7 @@ public class Send_cofirmation_mail extends CommonService
 	public void run() throws ServletException, IOException {
    {
 	  
-	   String from="info@sudantechservices.com";
+	   String from="ajit.kumar303@gmail.com";
 	     //String password = request.getParameter("password");
 	      String password="Computer";
       // Recipient's email ID needs to be mentioned.
@@ -23,7 +23,7 @@ public class Send_cofirmation_mail extends CommonService
        String username=request.getParameter("user_name");
       // Sender's email ID needs to be mentioned
       /*String userID =request.getParameter("from");*/
-     String text ="Hi  "+username+",\n\n"+"Your User Name : "+username+",\n \n"+ "Your Password  : "+pswd+",\n \n"+"Click on this Link to login"+",\n \n"+"http://www.autotrack.co.in/Autotrack/ControllerServlet/LoginService?usrname="+username+"&password="+pswd ;
+     String text ="Hi  "+username+",\n\n"+"Your User Name : "+username+",\n \n"+ "Your Password  : "+pswd+",\n \n"+"Click on this Link to login"+",\n \n"+"http://www.transnetworkx.com/NewVehicleTracking/ControllerServlet/LoginService?usrname="+username+"&password="+pswd ;
       //String text="http://localhost:8080/VehicleTracking/JSP/Reset_password.jsp?emailid="+to;
  /*    text=text+"\n"+"Plese send me ID & password on "+userID;*/
     /* System.out.println(username);

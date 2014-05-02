@@ -9,6 +9,7 @@ import com.ts.domain.UserRegister;
 public class UserRegisterDAO {
 public boolean register(UserRegister usrrgsobj)
 {
+	System.out.println("in dao");
 	DBTransaction dbtranobj=new DBTransaction();
 	try{
 	
@@ -21,33 +22,34 @@ public boolean register(UserRegister usrrgsobj)
 			rs.close();
 			return false;
 		}
-		else{
-			System.out.println("else");
-			pstmt=con.prepareStatement("insert into login_information values(?,?,?,?,?,?,?)");
+		
+			
+			pstmt=con.prepareStatement("insert into login_information values(?,?,?,?,?,?)");
 			pstmt.setString(1, usrrgsobj.getUsername());
 			pstmt.setString(2, usrrgsobj.getPassword());
 			pstmt.setString(3, usrrgsobj.getCompany());
 			pstmt.setString(4, usrrgsobj.getEmail());
 			pstmt.setString(5, usrrgsobj.getNumber());
 			pstmt.setString(6, usrrgsobj.getPrivilage());
-			pstmt.setString(7, usrrgsobj.getBelongs());
+			//pstmt.setString(7, usrrgsobj.getBelongs());
 			
-			int row=pstmt.executeUpdate();
-			System.out.println(row);
-			}
-		
-		con.close();
-		pstmt.close();
-			
-	}//try
-	
-	catch(Exception e)
-	{
-		//System.err.println(e.getMessage());
-		e.printStackTrace();
-	}
-	return true;
-	
-}//validate
+	int row=pstmt.executeUpdate();
 
+			
+			con.close();
+			pstmt.close();
+				
+		}
+		
+		catch(Exception e)
+		{
+			
+			e.printStackTrace();
+			
+		}
+		return true;
+		
+	}
 }
+
+			

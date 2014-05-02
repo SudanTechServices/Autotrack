@@ -7,26 +7,6 @@ private String number;
 private String company;
 private String email;
 private String privilage;
-private String belongs;
-
-public String getBelongs() {
-	return belongs;
-}
-public void setBelongs(String belongs) {
-	this.belongs = belongs;
-}
-public String getPrivilage() {
-	return privilage;
-}
-public void setPrivilage(String privilage) {
-	this.privilage = privilage;
-}
-public String getEmail() {
-	return email;
-}
-public void setEmail(String email) {
-	this.email = email;
-}
 public String getUsername() {
 	return username;
 }
@@ -51,4 +31,18 @@ public String getCompany() {
 public void setCompany(String company) {
 	this.company = company;
 }
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getPrivilage() {
+	return privilage;
+}
+public void setPrivilage(String privilage) {
+	this.privilage = privilage;
+}
+
+
 }

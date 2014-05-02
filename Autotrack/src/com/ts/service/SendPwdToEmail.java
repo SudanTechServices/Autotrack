@@ -14,7 +14,7 @@ public class SendPwdToEmail extends CommonService
 	public void run() throws ServletException, IOException {
    {
 	  
-	   String from="info@sudantechservices.com";
+	   String from="ajit.kumar303@gmail.com";
 	     //String password = request.getParameter("password");
 	      String password="Computer";
       // Recipient's email ID needs to be mentioned.

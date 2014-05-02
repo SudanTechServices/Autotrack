@@ -51,7 +51,7 @@ public class reset_password_service extends CommonService{
 						  {
 				
 				  st.executeUpdate("UPDATE  login_information SET password='"+confirmpassword+"' WHERE password='"+oldpassword+"' and user_name='"+username+"'");
-				  RequestDispatcher rd=request.getRequestDispatcher("../jsp/index.jsp?message=passwordupdated");
+				  RequestDispatcher rd=request.getRequestDispatcher("../jsp/dashboard.jsp?message=passwordupdated");
 					 rd.forward(request, response);
 				  System.out.println("Password Updated Successfully");
 						  }

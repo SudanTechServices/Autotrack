@@ -15,11 +15,11 @@ public class NewUser extends CommonService
 	public void run() throws ServletException, IOException {
    {
 	  
-	   String username="sudantechservices@gmail.com";
+	   String username="ajit.kumar303@gmail.com";
 	     //String password = request.getParameter("password");
 	      String password="Computer";
       // Recipient's email ID needs to be mentioned.
-      String to = "info@sudantechservices.com";
+      String to = "ajit.kumar@digitalastraasol.com";
 	   
 
       // Sender's email ID needs to be mentioned

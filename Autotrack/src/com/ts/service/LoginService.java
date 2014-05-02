@@ -14,22 +14,25 @@ import com.ts.domain.UserLogin;
 
 @SuppressWarnings("serial")
 public class LoginService extends CommonService{
+	
 	ResultSet rs=null;
 	String sessionuser=null;
 	String privilage=null,belongs=null;
 	PreparedStatement pstmt=null;
 	public void run()throws ServletException,IOException
 	{
+		System.out.println("inservice");
 		ses=request.getSession(false);
 		//ses.setMaxInactiveInterval(10);
 	//	System.out.println(ses.getId());
 		
 		UserLogin usrlgnobj=new UserLogin();
 		LoginDAO usrlgndao=new LoginDAO();
-			
+			System.out.println("inservice");
 				usrlgnobj.setUsername(request.getParameter("usrname"));
 				System.out.println(request.getParameter("password"));
 				usrlgnobj.setPassword(request.getParameter("password"));
+				System.out.println("in service");
 				Boolean log=usrlgndao.validate(usrlgnobj);
 				if(!response.isCommitted())
 				if(log)
@@ -37,6 +40,7 @@ public class LoginService extends CommonService{
 					try{
 									
 					DBTransaction dbtranobj=new DBTransaction();
+					
 					Connection con=dbtranobj.connect();
 					pstmt=con.prepareStatement("select date_time from session where user_id=? order by date_time desc limit 1");
 					pstmt.setString(1, usrlgnobj.getUsername());
@@ -61,14 +65,14 @@ public class LoginService extends CommonService{
 				ses.setAttribute("user",request.getParameter("usrname"));
 				ses.setAttribute("privilage",privilage);
 				ses.setAttribute("belongs",belongs);
-				RequestDispatcher rd=request.getRequestDispatcher("/HTML/frame_home.htm");
+				RequestDispatcher rd=request.getRequestDispatcher("/jsp/dashboard.jsp");
 				rd.forward(request, response);
 
 					
 				}
 				else
 				{
-					RequestDispatcher rd=request.getRequestDispatcher("/JSP/login.jsp?mode=invalid");
+					RequestDispatcher rd=request.getRequestDispatcher("/jsp/index.jsp?mode=invalid");
 					rd.forward(request, response);
 					
 				}
